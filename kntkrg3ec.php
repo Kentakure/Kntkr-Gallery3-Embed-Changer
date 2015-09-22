@@ -13,6 +13,19 @@ include("kntkrg3ec-option.php");
 require_once("kntkrg3ec-code.php");
 //--------------------------------------------------------------------------
 //
+//  プラグインページに設定画面のリンクを表示
+//
+//--------------------------------------------------------------------------
+function kntkrg3ec_add_settings_link( $links, $file ) {
+	if ( plugin_basename(__FILE__) == $file && function_exists( 'admin_url' ) ) {
+		$settings_link = '<a href="' . admin_url( 'options-general.php?page=kntkr-gallery3-embed-changer' ) . '">' . __( 'Settings' ) . '</a>';
+		array_unshift( $links, $settings_link ); // before other links
+	}
+	return $links;
+}
+add_filter( 'plugin_action_links', 'kntkrg3ec_add_settings_link', 10, 2 );
+//--------------------------------------------------------------------------
+//
 //  プラグイン削除の際に行うオプションの削除
 //
 //--------------------------------------------------------------------------
