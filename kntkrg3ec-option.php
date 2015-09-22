@@ -12,16 +12,6 @@ function kntkrg3ec_option () {
     // 設定メニュー下にサブメニューを追加:
     add_options_page('Kntkr Gallery3 Embed Changer Setting', 'Kntkr Gallery3 Embed Changer', 'manage_options', 'kntkr-gallery3-embed-changer', 'kntkrg3ec_setting');
 }
-
-//プラグインページに設定画面のリンクを表示
-function kntkrg3ec_add_settings_link( $links, $file ) {
-	if ( 'kntkr-gallery3-embed-changer/kntkrg3ec.php' == $file && function_exists( 'admin_url' ) ) {
-		$settings_link = '<a href="' . admin_url( 'options-general.php?page=kntkr-gallery3-embed-changer' ) . '">' . __( 'Settings' ) . '</a>';
-		array_unshift( $links, $settings_link ); // before other links
-	}
-	return $links;
-}
-add_filter( 'plugin_action_links', 'kntkrg3ec_add_settings_link', 10, 2 );
 //--------------------------------------------------------------------------
 //
 //  プラグイン設定変更画面を構築する
