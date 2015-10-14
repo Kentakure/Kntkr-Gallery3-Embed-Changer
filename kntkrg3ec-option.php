@@ -39,17 +39,3 @@ function kntkrg3ec_setting () {
         </form>
     </div>
 <?php } //設定変更画面の編集ここまで ?>
-<?php
-//--------------------------------------------------------------------------
-//
-//  フッターへの表示
-//
-//--------------------------------------------------------------------------
-add_action('admin_footer', 'admin_footer_kntkrg3ec');
-function admin_footer_kntkrg3ec () {
-    $key_value = get_option('kntkrg3ec_siteindex');
-    if ( $key_value ) {
-        echo "<p>キー : " . esc_html($key_value). "</p>";
-    }
-}
-?>
