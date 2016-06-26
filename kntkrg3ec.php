@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Kntkr Gallery3 Embed Changer
-Plugin URI: http://kentakure.net
+Plugin URI: https://github.com/Kentakure/Kntkr-Gallery3-Embed-Changer
 Description: 指定したGallery3のURLを自動的に画像に差し替える。設定画面付き。
 Version: 1.0
 Author: KENTAKURE
